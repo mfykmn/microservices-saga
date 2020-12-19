@@ -5,7 +5,7 @@ import kotlin.test.assertEquals
 
 class OrderServiceMainTest {
     @Test fun testOrderServiceMainHasAGreeting() {
-        val classUnderTest = OrderServiceMain()
+        val classUnderTest = App()
         assertEquals("Hello OrderService!", classUnderTest.main(emptyArray()))
     }
 }
