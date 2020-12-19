@@ -38,5 +38,5 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass.set("com.examples.sagas.AppKt")
+    mainClass.set("com.examples.sagas.OrdersServiceMain")
 }
