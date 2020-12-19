@@ -1,7 +1,7 @@
 package com.examples.sagas
 
-class OrdersServiceMain {
+class OrderServiceMain {
     fun main(args: Array<String>) : String {
-        return "Hello OrdersService!"
+        return "Hello OrderService!"
     }
 }
