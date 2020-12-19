@@ -1,6 +1,5 @@
 package com.examples.sagas
 
-import com.examples.sagas.OrdersServiceMain
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
