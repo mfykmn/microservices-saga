@@ -1,4 +1,4 @@
-package com.example.sagas.application
+package com.example.sagas.presentation
 
 import com.example.sagas.domain.entity.Order
 import com.example.sagas.domain.entity.OrderDetails
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 
-import com.example.sagas.domain.service.OrderService
+import com.example.sagas.application.OrderService
 
 @RestController
 @RequestMapping(path = ["orders"])

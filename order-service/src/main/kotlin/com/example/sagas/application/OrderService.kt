@@ -1,4 +1,4 @@
-package com.example.sagas.domain.service
+package com.example.sagas.application
 
 import org.springframework.stereotype.Service
 import org.springframework.beans.factory.annotation.Autowired
@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired
 import com.example.sagas.domain.entity.Order
 import com.example.sagas.domain.entity.OrderDetails
 import com.example.sagas.domain.repository.OrderRepository
-
-import com.example.sagas.infrastructure.Order as InfraOrder
 
 //   @Transactional
 @Service
@@ -30,10 +28,7 @@ class OrderService {
 //        Order order = orderAndEvents.result
 //
         // Orderをデータベースに永続化する
-        val data = InfraOrder(
-            itemId = order.itemId,
-            itemName = order.itemName)
-        orderRepository.save(data)
+        orderRepository.save(order)
 //
 //        // ドメインイベントをパブリッシュする
 //        eventPublisher.publish(Order.class, Long.toString(order.getId(), orderAndEvents.events);
