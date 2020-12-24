@@ -18,9 +18,12 @@ repositories {
 }
 
 dependencies {
+    // Spring Boot
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
-
+    // Eventuate
+    //implementation("io.eventuate.tram.core:eventuate-tram-jdbc-kafka:0.26.1.RELEASE")
+    // Kotlin
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
