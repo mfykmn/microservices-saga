@@ -23,7 +23,7 @@ class OrderServiceController {
         return ResponseEntity.ok(order)
     }
 
-    @PostMapping(path=["/orders"])
+    @PostMapping()
     fun createOrder() : ResponseEntity<String> {
         // TODO: リクエスト取得
         // TODO: バリデーション
