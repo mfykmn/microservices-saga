@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired
 
 import com.example.sagas.domain.entity.Order
 import com.example.sagas.domain.entity.OrderDetails
+import com.example.sagas.domain.entity.OrderId
+import com.example.sagas.domain.repository.DbOrder
 import com.example.sagas.domain.repository.OrderRepository
 
 //   @Transactional
@@ -28,7 +30,7 @@ class OrderService {
 //        Order order = orderAndEvents.result
 //
         // Orderをデータベースに永続化する
-        orderRepository.save(order)
+        orderRepository.save(DbOrder(orderId = order.orderId, itemId = order.itemId, itemName = order.itemName))
 //
 //        // ドメインイベントをパブリッシュする
 //        eventPublisher.publish(Order.class, Long.toString(order.getId(), orderAndEvents.events);
@@ -38,5 +40,13 @@ class OrderService {
 //        createOrderSagaManager.create(data, Order.class, order.getId());
 
         return order;
+    }
+
+    fun findById(orderId: OrderId) : Order? {
+        val dbOrder = orderRepository.findByOrderId(orderId)
+        if (dbOrder != null) {
+            return Order(orderId = dbOrder.orderId, itemId = dbOrder.itemId, itemName = dbOrder.itemName)
+        }
+        return null
     }
 }

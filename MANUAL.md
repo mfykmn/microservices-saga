@@ -9,7 +9,7 @@ user@host: ~/workspace/microservice-sage $ docker-compose -f docker-compose.yml 
 ### App
 - Order ServiceをCLIで利用する
     ```ShellSession
-    user@host: ~ $ curl -X GET http://0.0.0.0:10000/orders/0
+    user@host: ~ $ curl -X GET http://0.0.0.0:10000/orders/84bf789c-f486-4ad6-8c5c-4ba243fe333b
     user@host: ~ $ curl -X POST http://0.0.0.0:10000/orders
     ```
 ### MongoDB
